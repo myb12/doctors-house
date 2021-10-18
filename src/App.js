@@ -6,6 +6,7 @@ import Hero from './Components/Hero/Hero';
 import Services from './Components/Services/Services';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 import SignUp from './Components/SignUp/SignUp';
+import Articles from './Components/Articles/Articles';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/">
           <Hero />
           <Services />
+          <Articles />
         </Route>
 
         <Route path="/service/:serviceId">

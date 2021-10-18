@@ -12,7 +12,10 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <Link to="/" className="navbar-brand">
-                        <img src={logo} alt="Logo" />
+                        <div className="d-flex justify-content-center align-items-center mt-3 mt-lg-0 ">
+                            <img src={logo} alt="Logo" className=" me-2" />
+                            <span className="bran-name">Doctors' House</span>
+                        </div>
                     </Link>
 
                     <ul className="navbar-nav align-items-center ms-auto">
