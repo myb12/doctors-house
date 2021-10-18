@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
 
 initializeAuthentication();
@@ -28,12 +28,8 @@ const useFirebase = () => {
     }
 
     const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                setUserName();
-            })
+        return createUserWithEmailAndPassword(auth, email, password)
+
     }
 
     const setUserName = () => {
@@ -41,9 +37,11 @@ const useFirebase = () => {
             .then(result => { })
     }
 
+    const loginWithEmailAndPassword = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
 
 
-    // observe whether user auth state changed or not
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -65,8 +63,9 @@ const useFirebase = () => {
         setEmail,
         password,
         setPassword,
+        setUserName,
         registerNewUser,
-
+        loginWithEmailAndPassword,
     }
 }
 

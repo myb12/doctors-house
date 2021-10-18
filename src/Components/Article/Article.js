@@ -7,7 +7,7 @@ const Article = ({ article }) => {
     const { name, desc, imgURL } = article;
     return (
         <div className="col">
-            <div className="cardContainer">
+            <div className="cardContainer article-card">
                 <div className="imageContainer">
                     <img src={imgURL} alt="Health is Wealth" />
                 </div>

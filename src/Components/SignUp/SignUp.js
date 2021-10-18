@@ -4,8 +4,8 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css'
 
 const SignUp = () => {
-    const { user, signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, registerNewUser } = useAuth();
-    const [returnUser, setReturnUser] = useState(false);
+    const { user, signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, registerNewUser, loginWithEmailAndPassword } = useAuth();
+    const [returnUser, setReturnUser] = useState(true);
     const history = useHistory();
     const location = useLocation();
 
@@ -28,8 +28,22 @@ const SignUp = () => {
     const handlePasswordChange = e => {
         setPassword(e.target.value)
     }
+
     const handleSignUp = () => {
-        registerNewUser(email, password);
+        registerNewUser(email, password)
+            .then(({ user }) => {
+                setUserName();
+                history.push(location.state?.from || '/');
+            })
+    }
+
+    const handleSignIn = () => {
+        loginWithEmailAndPassword(email, password)
+            .then(({ user }) => {
+                console.log(user);
+                history.push(location.state?.from || '/');
+            })
+
     }
 
     return (
@@ -42,14 +56,14 @@ const SignUp = () => {
                                 <div onSubmit={(e) => e.preventDefault()}>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                        <input onBlur={handleEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input type="password" className="form-control" id="exampleInputPassword1" />
+                                        <input onBlur={handlePasswordChange} type="password" className="form-control" id="exampleInputPassword1" />
                                     </div>
-                                    <button type="submit" className="btn btn-regular">Login</button>
+                                    <button onClick={handleSignIn} type="submit" className="btn btn-regular">Login</button>
                                     <button type="submit" className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</button>
                                     <span onClick={() => setReturnUser(false)} className="ms-3 return-user">Create a new Account</span>
                                 </div>
