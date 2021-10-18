@@ -2,8 +2,9 @@
 	outline: none;
 	border: none;
 	cursor: pointer;
-	min-width: 150px;
-	padding: 12px 0;
+  min-width:100px;
+  width: auto;
+	padding: 12px 10px;
 	text-align: center;
 	border: #458ff6 2px solid;
 	border-radius: 30px;
