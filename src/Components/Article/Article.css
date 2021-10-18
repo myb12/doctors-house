@@ -10,11 +10,24 @@
 	flex-direction: column;
 	align-items: flex-start;
 	overflow: hidden;
+	
+}
+.imageContainer{
+    position: relative;
+    height: 130px;
+    width: 100%;
+    background-color: #abceff;
+    margin-bottom: 25px;
 }
 .imageContainer img {
+	position:absolute;
+	left: calc(50% - 75px);
+	top:10px;
 	transition: all 0.3s ease;
-	width: 100%;
-    height:300px;
+	width: 150px;
+    height:150px;
+	border-radius: 50%;
+	cursor: pointer;
 }
 .cardContainer:hover .imageContainer img {
 	transform: scale(1.1);

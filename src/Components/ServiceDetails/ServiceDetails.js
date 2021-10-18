@@ -16,11 +16,11 @@ const ServiceDetails = () => {
     }
 
     return (
-        <section className="container mt-4">
+        <section className="container service-details-container">
 
             {
                 specificService &&
-                <div className="row my-5">
+                <div className="row">
                     <div className="row align-items-center">
                         <div className="col-md-6">
                             <img className="img-fluid" src={specificService.imgURL} alt="" />

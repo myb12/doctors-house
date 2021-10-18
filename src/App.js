@@ -7,30 +7,41 @@ import Services from './Components/Services/Services';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 import SignUp from './Components/SignUp/SignUp';
 import Articles from './Components/Articles/Articles';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        
+        <Switch>
+          <Route exact path="/">
+            <Hero />
+            <Services />
+          </Route>
 
-      <Switch>
+          <Route exact path="/home">
+            <Hero />
+            <Services />
+          </Route>
 
-        <Route exact path="/">
-          <Hero />
-          <Services />
-          <Articles />
-        </Route>
+          <PrivateRoute path="/service/:serviceId">
+            <ServiceDetails />
+          </PrivateRoute>
 
-        <Route path="/service/:serviceId">
-          <ServiceDetails />
-        </Route>
+          <Route path="/login">
+            <SignUp />
+          </Route>
 
-        <Route path="/login">
-          <SignUp />
-        </Route>
-      </Switch>
+          <Route path="/latest-articles">
+            <Articles />
+          </Route>
+        </Switch>
 
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 }
 
