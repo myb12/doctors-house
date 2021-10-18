@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import Services from './Components/Services/Services';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import SignUp from './Components/SignUp/SignUp';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
 
         <Route path="/service/:serviceId">
           <ServiceDetails />
+        </Route>
+
+        <Route path="/login">
+          <SignUp />
         </Route>
       </Switch>
 
