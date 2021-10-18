@@ -10,7 +10,25 @@
 }
 .nav-link{
     transition: all 0.2s ease;
+    position: relative;
 }
 .nav-link:hover{
     color:#FFCE31 !important;
+}
+
+.navbar .nav-link:before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:0;
+    height: 3px;
+    background: #FFCE31;
+    transition: all 0.5s ease-out;
+}
+
+.navbar .nav-link:hover:before {
+    width: 80%;
+    height: 3px;
 }

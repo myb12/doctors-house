@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/myb.svg'
 import './Navbar.css'
 
 const Navbar = () => {
+    const activeStyle = {
+        fontWeight: "bold",
+        color: "#FFCE31",
+    }
     const { user, logOut } = useAuth();
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: '#fff'}}>
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: '#fff' }}>
             <div className="container-fluid">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -16,32 +20,32 @@ const Navbar = () => {
                     <Link to="/" className="navbar-brand">
                         <div className="d-flex justify-content-center align-items-center mt-3 mt-lg-0 ">
                             <img src={logo} alt="Logo" className=" me-2" />
-                            <span className="bran-name">Doctors' House</span>
+                            <span className="bran-name">Doctors' <span style={{ color: '#FFCE31' }}>House</span></span>
                         </div>
                     </Link>
 
                     <ul className="navbar-nav align-items-center ms-auto">
                         <li>
-                            <span className="nav-link d-flex align-items-center">
+                            <span className="d-flex align-items-center me-3">
                                 <img width="30" className="rounded-circle me-2" src={user.photoURL} alt="" />{user?.displayName}
                             </span>
                         </li>
                         <li className="nav-item">
-                            <Link to="/home" className="nav-link">
+                            <NavLink activeStyle={activeStyle} to="/home" className="nav-link">
                                 Home
-                            </Link>
+                            </NavLink>
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/latest-articles" className="nav-link">
+                            <NavLink activeStyle={activeStyle} to="/latest-articles" className="nav-link">
                                 Latest Articles
-                            </Link>
+                            </NavLink>
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/about-us" className="nav-link">
+                            <NavLink activeStyle={activeStyle} to="/about-us" className="nav-link">
                                 About Us
-                            </Link>
+                            </NavLink>
                         </li>
                         {
                             user.email ?
@@ -51,7 +55,7 @@ const Navbar = () => {
                                 </li>
                                 :
                                 <li className="nav-item">
-                                    <Link to="/login" className="nav-link">Login</Link>
+                                    <NavLink activeStyle={activeStyle} to="/login" className="nav-link">Login</NavLink>
                                 </li>
                         }
                     </ul>

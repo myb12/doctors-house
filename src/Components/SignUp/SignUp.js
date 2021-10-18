@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css'
 
 const SignUp = () => {
-    const { user, signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, registerNewUser, loginWithEmailAndPassword } = useAuth();
+    const { user, signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
     const [returnUser, setReturnUser] = useState(true);
     const history = useHistory();
     const location = useLocation();
@@ -13,6 +13,10 @@ const SignUp = () => {
         signInUsingGoogle()
             .then(({ user }) => {
                 history.push(location.state?.from || '/');
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
             })
             .finally(() => setIsLoading(false))
     }
@@ -34,6 +38,10 @@ const SignUp = () => {
             .then(({ user }) => {
                 setUserName();
                 history.push(location.state?.from || '/');
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
             })
     }
 
@@ -42,10 +50,15 @@ const SignUp = () => {
             .then(({ user }) => {
                 console.log(user);
                 history.push(location.state?.from || '/');
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
             })
 
     }
 
+    console.log(error);
     return (
         <section style={{ marginTop: 150 }}>
             {
@@ -99,7 +112,7 @@ const SignUp = () => {
                         </div>
                     </div>
             }
-
+            <div className="row text-danger justify-content-center mt-3 w-100">{error}</div>
 
         </section>
     );
