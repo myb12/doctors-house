@@ -67,7 +67,7 @@ const SignUp = () => {
             {
                 returnUser ?
                     <div className="container">
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center px-2">
                             <div className="col-md-6 form-container">
                                 <form onSubmit={handleSignIn}>
                                     <div className="mb-3">
@@ -91,7 +91,7 @@ const SignUp = () => {
                     </div>
                     :
                     <div className="container">
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center px-2">
                             <div className="col-md-6 form-container">
                                 <form onSubmit={handleSignUp}>
                                     <div className="mb-3">
