@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css'
 
 const SignUp = () => {
-    const {signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
+    const { signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
     const [returnUser, setReturnUser] = useState(true);
     const history = useHistory();
     const location = useLocation();
@@ -79,7 +79,7 @@ const SignUp = () => {
                                     </div>
                                     <button onClick={handleSignIn} type="submit" className="btn btn-regular">Login</button>
                                     <button type="submit" className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</button>
-                                    <span onClick={() => setReturnUser(false)} className="ms-3 return-user">Create a new Account</span>
+                                    <p onClick={() => setReturnUser(false)} className="mt-3 return-user">Create a new Account</p>
                                 </div>
                             </div>
                         </div>
@@ -104,9 +104,7 @@ const SignUp = () => {
                                     </div>
                                     <button onClick={handleSignUp} type="submit" className="btn btn-regular">Sign up</button>
                                     <button type="submit" className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</button>
-                                    <div className="text-center mt-2">
-                                        <span onClick={() => setReturnUser(true)} className="ms-3 return-user">Already Have an Account</span>
-                                    </div>
+                                    <p onClick={() => setReturnUser(true)} className="mt-3 return-user">Already Have an Account</p>
                                 </div>
 
                             </div>

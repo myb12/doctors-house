@@ -49,8 +49,8 @@ const ContactUs = () => {
 
                 <div className="col-sm-12 col-md-7">
 
-                    <div className="mb-4">
-                        <iframe title="This is a unique title" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14607.605510543724!2d90.38426189999998!3d23.75089605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1634623431110!5m2!1sen!2sbd" width="100%" height="400" frameBorder="0" style={{ border: 0 }} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
+                    <div className="mb-3">
+                        <iframe title="This is a unique title" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14607.605510543724!2d90.38426189999998!3d23.75089605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1634623431110!5m2!1sen!2sbd" width="100%" height="350" frameBorder="0" style={{ border: 0 }} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
 
                     </div>
 

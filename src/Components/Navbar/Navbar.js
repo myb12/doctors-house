@@ -68,7 +68,7 @@ const Navbar = () => {
 
                         <li className="nav-item">
                             <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/contact-us" className="nav-link">
-                                Contact Us
+                                Contact
                             </NavLink>
                         </li>
                         {
