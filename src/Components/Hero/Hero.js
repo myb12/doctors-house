@@ -13,7 +13,7 @@ const Hero = () => {
                         </h1>
                         <p className="heroDes">
                             <b>Doctors' House</b> provides progressive, and affordable
-                            healthcare, accessible on mobile and online for everyone
+                            healthcare, accessible on mobile and online for everyone.
                         </p>
                         <button className="btn-regular">Consult Today</button>
                     </div>

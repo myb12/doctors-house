@@ -24,8 +24,7 @@ const Footer = () => {
                                     </Link>
                                 </div>
                                 <div className="footer-text">
-                                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                        elit,Lorem ipsum dolor sit amet.</p>
+                                    <p>Doctors' House provides progressive, and affordable healthcare, accessible on mobile and online for everyone.</p>
                                 </div>
                                 <div className="footer-social-icon">
                                     <p>Follow us</p>
