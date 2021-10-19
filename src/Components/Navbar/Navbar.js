@@ -39,7 +39,7 @@ const Navbar = () => {
 
                     <ul className="navbar-nav align-items-center ms-auto">
                         <li>
-                            <span className="d-flex align-items-center me-3">
+                            <span className="d-flex align-items-center  me-3">
                                 {
                                     user?.photoURL && <img width="30" className="rounded-circle me-2" src={user.photoURL} alt="" />
                                 }
@@ -59,9 +59,6 @@ const Navbar = () => {
                                     </NavLink>
                                 </li>
                         }
-
-
-
 
                         <li className="nav-item">
                             <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/latest-articles" className="nav-link">

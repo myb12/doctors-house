@@ -30,8 +30,7 @@ const useFirebase = () => {
     }
 
     const registerNewUser = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password)
-
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const setUserName = () => {

@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css'
 
 const SignUp = () => {
-    const {  signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
+    const {signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
     const [returnUser, setReturnUser] = useState(true);
     const history = useHistory();
     const location = useLocation();
@@ -21,7 +21,7 @@ const SignUp = () => {
             })
             .finally(() => setIsLoading(false))
     }
- 
+
 
     const handleNameChange = e => {
         setName(e.target.value);
