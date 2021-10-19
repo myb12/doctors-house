@@ -34,7 +34,8 @@ const SignUp = () => {
         setPassword(e.target.value)
     }
 
-    const handleSignUp = () => {
+    const handleSignUp = (e) => {
+        e.preventDefault();
         registerNewUser(email, password)
             .then(({ user }) => {
                 setUserName();
@@ -47,7 +48,8 @@ const SignUp = () => {
             })
     }
 
-    const handleSignIn = () => {
+    const handleSignIn = (e) => {
+        e.preventDefault();
         loginWithEmailAndPassword(email, password)
             .then(({ user }) => {
                 history.push(location.state?.from || '/');
@@ -67,20 +69,20 @@ const SignUp = () => {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-md-6">
-                                <div onSubmit={(e) => e.preventDefault()}>
+                                <form onSubmit={handleSignIn}>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input onBlur={handleEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                        <input onBlur={handleEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input onBlur={handlePasswordChange} type="password" className="form-control" id="exampleInputPassword1" />
+                                        <input onBlur={handlePasswordChange} type="password" className="form-control" id="exampleInputPassword1" required />
                                     </div>
-                                    <button onClick={handleSignIn} type="submit" className="btn btn-regular">Login</button>
-                                    <button type="submit" className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</button>
+                                    <button type="submit" className="btn btn-regular">Login</button>
+                                    <span className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</span>
                                     <p onClick={() => setReturnUser(false)} className="mt-3 return-user">Create a new Account</p>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -88,24 +90,25 @@ const SignUp = () => {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-md-6">
-                                <div onSubmit={(e) => e.preventDefault()}>
+                                <form onSubmit={handleSignUp}>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputName" className="form-label">Name</label>
-                                        <input onBlur={handleNameChange} type="text" className="form-control" id="exampleInputName" aria-describedby="emailHelp" />
+                                        <input onBlur={handleNameChange} type="text" className="form-control" id="exampleInputName" aria-describedby="emailHelp" required/>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                        <input onBlur={handleEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                        <input onBlur={handleEmailChange} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
                                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                        <input onBlur={handlePasswordChange} type="password" className="form-control" id="exampleInputPassword1" />
+                                        <input onBlur={handlePasswordChange} type="password" className="form-control" id="exampleInputPassword1" required/>
                                     </div>
-                                    <button onClick={handleSignUp} type="submit" className="btn btn-regular">Sign up</button>
-                                    <button type="submit" className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</button>
+                                    <button type="submit" className="btn btn-regular">Sign up</button>
+                                    <span type="submit" className="btn btn-regular ms-3" onClick={handleGoogleSignIn}>Sign in with Google</span>
+
                                     <p onClick={() => setReturnUser(true)} className="mt-3 return-user">Already Have an Account</p>
-                                </div>
+                                </form>
 
                             </div>
                         </div>
