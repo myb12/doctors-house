@@ -61,7 +61,7 @@ const Navbar = () => {
                         }
 
                         <li className="nav-item">
-                            <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/latest-articles" className="nav-link">
+                            <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/articles" className="nav-link">
                                 Articles
                             </NavLink>
                         </li>

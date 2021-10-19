@@ -34,19 +34,19 @@ function App() {
             <ServiceDetails />
           </PrivateRoute>
 
-          <Route path="/login">
-            <SignUp />
+          <Route path="/articles">
+            <Articles />
           </Route>
 
-          <Route path="/latest-articles">
-            <Articles />
+          <Route path="/login">
+            <SignUp />
           </Route>
 
           <Route path="/contact-us">
             <ContactUs />
           </Route>
 
-          <Route path="/not-found">
+          <Route path="*">
             <NotFound />
           </Route>
         </Switch>
