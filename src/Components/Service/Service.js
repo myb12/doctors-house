@@ -18,7 +18,7 @@ const Service = ({ service }) => {
                 </div>
                 <div>
                     <Link to={`/service/${id}`}>
-                        <button className="service-button d-flex align-items-center justify-content-center">
+                        <button onClick={() => window.scrollTo(0, 0)} className="service-button d-flex align-items-center justify-content-center">
                             <CgMoreO className="me-2" />
                             <span>Learn More</span>
                         </button>
@@ -26,7 +26,7 @@ const Service = ({ service }) => {
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 

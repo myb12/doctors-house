@@ -3,36 +3,42 @@
         "id": 1,
         "name": "Search Doctor",
         "desc": "Choose your doctor from thousands of specialist, general, and trusted hospitals",
-        "imgURL": "https://thumbs.dreamstime.com/b/online-medicine-concept-digital-online-medical-care-online-doctor-pharmacist-medical-consultation-doctor-showing-recipe-123723331.jpg"
+        "longDesc": "Choose your doctor from thousands of specialist, general, and trusted hospitals. We help to protect patients and improve medical education and practice in the Bangladesh by setting standards for students and doctors. We support them in achieving and exceeding those standards, and take action when they are not met.",
+        "imgURL": "https://i.ibb.co/D5cFDx2/search-doctor.jpg"
     },
     {
         "id": 2,
         "name": "Online Pharmacy",
         "desc": "Buy your medicines with our mobile application with a simple delivery system",
-        "imgURL": "https://thumbs.dreamstime.com/b/online-medicine-concept-digital-online-medical-care-online-doctor-pharmacist-medical-consultation-doctor-showing-recipe-123723331.jpg"
+        "longDesc": "Buy your medicines with our mobile application with a simple delivery system. We provide the best pharmacy solution online. We are focused on getting you the healthcare support & help you need so that you can enjoy your best health. Find your required medications at osudpotro.",
+        "imgURL": "https://i.ibb.co/mhx2ZCq/online-pharmacy.jpg"
     },
     {
         "id": 3,
-        "name": "Consulation",
+        "name": "Consultation",
         "desc": "Free consultation with our trusted doctors and get the best recomendations",
-        "imgURL": "https://thumbs.dreamstime.com/b/online-medicine-concept-digital-online-medical-care-online-doctor-pharmacist-medical-consultation-doctor-showing-recipe-123723331.jpg"
+        "longDesc": "Free consultation with our trusted doctors and get the best recomendations. Find your Doctor! Get Telemedicine and Doctor Video Consultation service with thousands of Doctors and Hospitals in Bangladesh. Doctor; Hospital. · Payment. Make payment · Mobile Icon. Be present in the consult room on apollo247.com at the time of consult",
+        "imgURL": "https://i.ibb.co/Mp3WcsH/consulation.png"
     },
     {
         "id": 4,
-        "name": "Details Info",
-        "desc": "Free consultation with our trusted doctors and get the best recomendations",
-        "imgURL": "https://thumbs.dreamstime.com/b/online-medicine-concept-digital-online-medical-care-online-doctor-pharmacist-medical-consultation-doctor-showing-recipe-123723331.jpg"
+        "name": "Detailed Info",
+        "desc": "Your medical history includes both your personal health history and your family health history.",
+        "longDesc": "Your medical history includes both your personal health history and your family health history. Your personal health history has details about any health problems you’ve ever had. A family health history has details about health problems your blood relatives have had during their lifetimes.",
+        "imgURL": "https://i.ibb.co/C8TNTch/details-info.jpg"
     },
     {
         "id": 5,
         "name": "Emergency Care",
         "desc": "You can get 24/7 urgent care for yourself or your children and your lovely family",
-        "imgURL": "https://thumbs.dreamstime.com/b/online-medicine-concept-digital-online-medical-care-online-doctor-pharmacist-medical-consultation-doctor-showing-recipe-123723331.jpg"
+        "longDesc": "You can get 24/7 urgent care for yourself or your children and your lovely family. All around the world, acutely ill and injured people seek care every day.  Frontline providers manage children and adults with medical, surgical and obstetric emergencies, including injuries and infections, heart attacks and strokes, asthma and acute complications of pregnancy.",
+        "imgURL": "https://i.ibb.co/FDBhCdn/emmergency-care.jpg"
     },
     {
         "id": 6,
         "name": "Tracking",
         "desc": "Track and save your medical history and health data",
-        "imgURL": "https://thumbs.dreamstime.com/b/online-medicine-concept-digital-online-medical-care-online-doctor-pharmacist-medical-consultation-doctor-showing-recipe-123723331.jpg"
+        "longDesc": "Track and save your medical history and health data. Also keep track of your health and also to take suggestions whenever necessary. The main difficulty is to manage their health records like immunization records, medical history, medications, lab results, screening due dates, etc in paper form.",
+        "imgURL": "https://i.ibb.co/vjjhxB1/tracking-2.jpg"
     }
 ]

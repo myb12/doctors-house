@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css'
 
 const SignUp = () => {
-    const { user, signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
+    const {  signInUsingGoogle, setIsLoading, setName, setEmail, email, password, setPassword, setUserName, error, setError, registerNewUser, loginWithEmailAndPassword } = useAuth();
     const [returnUser, setReturnUser] = useState(true);
     const history = useHistory();
     const location = useLocation();
@@ -21,7 +21,7 @@ const SignUp = () => {
             })
             .finally(() => setIsLoading(false))
     }
-    console.log(user);
+ 
 
     const handleNameChange = e => {
         setName(e.target.value);
@@ -50,7 +50,6 @@ const SignUp = () => {
     const handleSignIn = () => {
         loginWithEmailAndPassword(email, password)
             .then(({ user }) => {
-                console.log(user);
                 history.push(location.state?.from || '/');
                 setError('');
                 window.scrollTo(0, 0);
@@ -61,7 +60,6 @@ const SignUp = () => {
 
     }
 
-    console.log(error);
     return (
         <section style={{ marginTop: 150 }}>
             {

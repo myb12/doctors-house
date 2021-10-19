@@ -5,7 +5,7 @@ import './Services.css';
 
 const Services = () => {
     const [services] = useServices();
-    console.log(services);
+  
     return (
         <section className="services-area my-5">
             <div className="container">

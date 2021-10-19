@@ -12,7 +12,7 @@ const Footer = () => {
     }
     return (
         <footer className="footer-section">
-            <hr /> 
+            <hr className="devider" />
             <div className="container">
                 <div className="footer-content pt-5 pb-5">
                     <div className="row">
@@ -52,7 +52,7 @@ const Footer = () => {
                                     <li onClick={handleScroll}><Link to="/">Home</Link></li>
                                     <li onClick={handleScroll}><Link to="latest-articles">Articles</Link></li>
                                     <li onClick={handleScroll}><Link to="#">Services</Link></li>
-                                    <li onClick={handleScroll}><Link  to="/contact-us">Contact</Link></li>
+                                    <li onClick={handleScroll}><Link to="/contact-us">Contact</Link></li>
                                     <li onClick={handleScroll} ><Link to="/login">Login</Link></li>
                                     <li onClick={handleScroll}><Link to="#">Doctor</Link></li>
                                     <li onClick={handleScroll}><Link to="#">Primary Care</Link></li>
@@ -70,12 +70,12 @@ const Footer = () => {
                                     <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                                 </div>
                                 <div className="subscribe-form">
-                                    <form action="#">
+                                    <div>
                                         <input type="text" placeholder="Email Address" />
                                         <button>
                                             <SiMinutemailer style={{ color: '#fff' }} />
                                         </button>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

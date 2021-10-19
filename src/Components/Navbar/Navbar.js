@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/myb.svg'
 import './Navbar.css'
@@ -7,6 +7,7 @@ import './Navbar.css'
 const Navbar = () => {
     const { user, logOut } = useAuth();
     const location = useLocation();
+    const history = useHistory();
 
     //=========styles for active nav link========// 
     const activeStyle = {
@@ -16,6 +17,11 @@ const Navbar = () => {
 
     const handleScroll = () => {
         window.scrollTo(0, 0);
+    }
+
+    const handleLogOut = () => {
+        logOut();
+        history.push('/');
     }
     return (
         <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: '#fff' }}>
@@ -70,9 +76,8 @@ const Navbar = () => {
                         </li>
                         {
                             user.email ?
-
                                 <li className="nav-item">
-                                    <button onClick={logOut} className="btn btn-rounded nav-link">Log out</button>
+                                    <button onClick={handleLogOut} className="btn btn-rounded nav-link">Log out</button>
                                 </li>
                                 :
                                 <li className="nav-item">

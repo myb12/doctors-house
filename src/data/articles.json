@@ -3,18 +3,18 @@
         "id": 1,
         "name": "Disease detection, check up in the laboratory",
         "desc": "In this case, the role of the health laboratory is very important to do a disease detection...",
-        "imgURL": "https://www.hematologyadvisor.com/wp-content/uploads/sites/14/2019/01/scientistlookingatbloodspe_1498988-860x573.jpg"
+        "imgURL": "https://i.ibb.co/Vg6FMKz/article-1.png"
     },
     {
         "id": 2,
         "name": "Herbal medicines that are safe for consumption",
         "desc": "Herbal medicine is very widely used at this time because of its very good for your health...",
-        "imgURL": "https://previews.123rf.com/images/pitinan/pitinan1905/pitinan190500093/129250356-young-female-doctor-working-using-microscope-in-hospital-laboratory-medical-and-medicine-technology-.jpg"
+        "imgURL": "https://i.ibb.co/N7MNgYp/article-2.png"
     },
     {
         "id": 3,
         "name": "Natural care for healthy facial skin",
         "desc": "A healthy lifestyle should start from now and also for your skin health. There are some...",
-        "imgURL": "https://images.everydayhealth.com/images/skin-beauty/natural-diy-skin-remedies-722x406.jpg?sfvrsn=2b60bdb7_0"
+        "imgURL": "https://i.ibb.co/1bH0SWd/article-3.png"
     }
 ]

@@ -4,7 +4,6 @@ import { CgMoreO } from 'react-icons/cg';
 import './Article.css';
 
 const Article = ({ article }) => {
-    console.log(article);
     const { name, desc, imgURL } = article;
     return (
         <div className="col">
@@ -33,7 +32,7 @@ const Article = ({ article }) => {
                         </button>
                     </div>
                     <div className="col-md-6 px-0">
-                        <button className="w-100 article-btn-learn-more d-flex align-items-center">
+                        <button className="w-100 article-btn-learn-more d-flex align-items-center justify-content-center">
                             <CgMoreO className="me-2" />
                             <span>Learn More</span>
                         </button>

@@ -1,3 +1,6 @@
+.devider{
+  margin-top: 150px;
+}
 ul {
     margin: 0px;
     padding: 0px;
@@ -129,6 +132,7 @@ ul {
   border: 1px solid #FFCE31;
   color: #fff;
 }
+
 .subscribe-form button {
     position: absolute;
     height:100%;

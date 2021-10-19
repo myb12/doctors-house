@@ -9,7 +9,6 @@ const ServiceDetails = () => {
     const [services] = useServices();
 
     const specificService = services.find(service => service.id === +serviceId);
-    console.log(specificService);
 
     const handleClick = () => {
         history.push('/');
@@ -20,17 +19,17 @@ const ServiceDetails = () => {
 
             {
                 specificService &&
-                <div className="row">
-                    <div className="row align-items-center">
+                <div className="row justify-content-center">
+                    <div className="row align-items-center ">
                         <div className="col-md-6">
-                            <img className="img-fluid" src={specificService.imgURL} alt="" />
+                            <img className="w-100" src={specificService.imgURL} alt="" />
                         </div>
                         <div className="col-md-6">
                             <h1 className="heroHeading">
                                 {specificService.name}
                             </h1>
-                            <p className="heroDes">
-                                {specificService.desc}
+                            <p className="heroDes w-100">
+                                {specificService.longDesc}
                             </p>
                             <button onClick={handleClick} className="btn-regular">Back to All Services</button>
                         </div>

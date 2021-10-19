@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
-    // console.log(user);
+   
     if (isLoading) {
         return (
             <div className="d-flex justify-content-center">
