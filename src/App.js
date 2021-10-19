@@ -18,7 +18,6 @@ function App() {
     <AuthProvider>
       <Router>
         <Navbar />
-
         <Switch>
           <Route exact path="/">
             <Hero />
