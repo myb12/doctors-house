@@ -42,6 +42,8 @@ const SignUp = () => {
                 history.push(location.state?.from || '/');
                 setError('');
                 window.scrollTo(0, 0);
+                //=====this will reload page to show newly registered  user's information=====//
+                window.location.reload();
             })
             .catch(error => {
                 setError(error.message);
