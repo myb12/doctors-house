@@ -4,13 +4,11 @@
 	cursor: pointer;
   min-width:100px;
   width: auto;
-	padding: 8px 10px;
+	padding: 8px 12px;
 	text-align: center;
 	border:  2px solid #458ff6;
 	border-radius: 30px;
-	font-size: 1.05rem;
 	transition: all 0.2s ease;
-	font-weight: 700;
   color:#458ff6;
   background-color: #fff;
 }
