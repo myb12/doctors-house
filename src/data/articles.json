@@ -16,5 +16,23 @@
         "name": "Natural care for healthy facial skin",
         "desc": "A healthy lifestyle should start from now and also for your skin health. There are some...",
         "imgURL": "https://i.ibb.co/1bH0SWd/article-3.png"
+    },
+    {
+        "id": 4,
+        "name": "Molnupiravir vs. COVID-19",
+        "desc": "Molnupiravir has promise as a COVID-19 treatment, but how much do we know about it...",
+        "imgURL": "https://i.ibb.co/qrCHqP4/article-4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "The neurocognitive impact of long COVID",
+        "desc": "What do we know about the long-term neurocognitive impact of COVID-19, and what are we yet to learn...",
+        "imgURL": "https://i.ibb.co/QQXTb5L/article-5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "DNA vs. mRNA vaccines",
+        "desc": "This Snapshot feature explains how DNA vaccines work, the differences between DNA and mRNA vaccines...",
+        "imgURL": "https://i.ibb.co/bKLSLX0/article-6.jpg"
     }
 ]
