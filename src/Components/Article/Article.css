@@ -10,13 +10,16 @@
 	flex-direction: column;
 	align-items: flex-start;
 	overflow: hidden;
-	
+}
+.article-card{
+	display: flex;
+	justify-content: space-between;
 }
 .imageContainer{
     position: relative;
     height: 130px;
     width: 100%;
-    background-color: #abceff;
+    background-color: #458ff6;
     margin-bottom: 25px;
 }
 .imageContainer img {
@@ -29,7 +32,7 @@
 	border-radius: 50%;
 	cursor: pointer;
 }
-.cardContainer:hover .imageContainer img {
+.cardContainer img:hover{
 	transform: scale(1.1);
 }
 .infoContainer {
@@ -54,6 +57,44 @@
 	color: #4089ed;
 	margin-top: auto;
 	justify-self: flex-end;
+}
+
+.article-footer button{
+	border:none;
+	height:35px;
+	color:#fff; 
+	font-size: 18px;
+	transition: all 0.2s linear;
+	border: 1px solid transparent;
+}
+
+.article-btn-love{
+	background-color: #dc3545;
+}
+
+.article-btn-love:hover{
+	background-color: #fff;
+	color: #dc3545;
+	border: 1px solid #dc3545;
+}
+.article-btn-share{
+	background-color: #FFCE31;
+}
+
+.article-btn-share:hover{
+	background-color: #fff;
+	color: #FFCE31;
+	border: 1px solid #FFCE31;
+}
+
+.article-btn-learn-more{
+	background-color: #458ff6;
+}
+
+.article-btn-learn-more:hover{
+	background-color: #fff;
+	color: #458ff6;
+	border: 1px solid #458ff6;
 }
 
 @media screen and (max-width: 600px) {

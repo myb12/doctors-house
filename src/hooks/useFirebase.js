@@ -23,7 +23,8 @@ const useFirebase = () => {
     const logOut = () => {
         signOut(auth)
             .then(() => {
-                setUser({})
+                setUser({});
+                window.scrollTo(0, 0);
             })
             .finally(() => setIsLoading(false))
     }

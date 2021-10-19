@@ -1,0 +1,16 @@
+.service-image{
+    height: 250px;
+}
+
+.service-button{
+    width: 100%;
+    background-color:#458ff6;
+    color: #fff;
+    height:35px;
+    border:none;
+    transition: all 0.2s ease-in-out;
+}
+
+.service-button:hover{
+    background-color:#FFCE31;
+}

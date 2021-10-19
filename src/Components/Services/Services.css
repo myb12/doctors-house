@@ -1,5 +1,5 @@
-.food-area nav li,
-.food-area nav li span{
+.services-area nav li,
+.services-area nav li span{
     color: black;
     cursor: pointer;
     font-weight: 600;
@@ -11,14 +11,14 @@
     border-bottom: 2px solid #458ff6;
 }
 
-.food-area nav li span:hover{
+.services-area nav li span:hover{
     color: #000;
 }
-.food-area nav .active{
+.services-area nav .active{
     color: red;
 }
 
-.food-area nav .active::after{
+.services-area nav .active::after{
     content: "";
     width: 80%;
     margin: 0 auto;
@@ -30,7 +30,7 @@
     display: block;
 }
 
-.food-area nav .nav-link:before{
+.services-area nav .nav-link:before{
     content: "";
     position: absolute;
     bottom: 8px;
@@ -43,33 +43,34 @@
     transition: all 0.5s ease-out;
 }
 
-.food-area nav .nav-link:hover:before {
+.services-area nav .nav-link:hover:before {
     width: 80%;
     height: 3px;
     visibility: visible;
 }
-.food-area .card{
+.services-area .card{
     height: 100%;
     border: none;
     box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
     transition: all .28s cubic-bezier(.15,0,.15,1) 0s;
 }
-.food-area .card-img-top{
+.services-area .card-img-top{
     width: 60%;
     display: block;
     padding-top: 10px;
     margin: 0 auto;
 }
 
-.food-area div > a{
+.services-area div > a{
     color: #000;
     text-decoration: none;
 }
 
-.food-area div > a:hover{
+.services-area div > a:hover{
     text-decoration: none;
 }
 
-.food-area .card:hover{
-   box-shadow: 0 1px 50px 10px rgb(0 0 0 / 15%);
+.services-area .card:hover{
+   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 50%), 0 1px 3px 1px rgb(60 64 67 / 35%);
+   transform: translateY(-2px);
 }

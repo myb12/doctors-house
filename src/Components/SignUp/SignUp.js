@@ -14,6 +14,7 @@ const SignUp = () => {
             .then(({ user }) => {
                 history.push(location.state?.from || '/');
                 setError('');
+                window.scrollTo(0, 0);
             })
             .catch(error => {
                 setError(error.message);
@@ -39,6 +40,7 @@ const SignUp = () => {
                 setUserName();
                 history.push(location.state?.from || '/');
                 setError('');
+                window.scrollTo(0, 0);
             })
             .catch(error => {
                 setError(error.message);
@@ -51,6 +53,7 @@ const SignUp = () => {
                 console.log(user);
                 history.push(location.state?.from || '/');
                 setError('');
+                window.scrollTo(0, 0);
             })
             .catch(error => {
                 setError(error.message);

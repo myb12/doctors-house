@@ -1,15 +1,22 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../images/myb.svg'
 import './Navbar.css'
 
 const Navbar = () => {
-    const activeStyle = {
-        fontWeight: "bold",
-        color: "#FFCE31",
-    }
     const { user, logOut } = useAuth();
+    const location = useLocation();
+
+    //=========styles for active nav link========// 
+    const activeStyle = {
+        color: "#FFCE31",
+        borderBottom: '3px solid #FFCE31',
+    }
+
+    const handleScroll = () => {
+        window.scrollTo(0, 0);
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: '#fff' }}>
             <div className="container-fluid">
@@ -20,31 +27,45 @@ const Navbar = () => {
                     <Link to="/" className="navbar-brand">
                         <div className="d-flex justify-content-center align-items-center mt-3 mt-lg-0 ">
                             <img src={logo} alt="Logo" className=" me-2" />
-                            <span className="bran-name">Doctors' <span style={{ color: '#FFCE31' }}>House</span></span>
+                            <span className="brand-name">Doctors' House</span>
                         </div>
                     </Link>
 
                     <ul className="navbar-nav align-items-center ms-auto">
                         <li>
                             <span className="d-flex align-items-center me-3">
-                                <img width="30" className="rounded-circle me-2" src={user.photoURL} alt="" />{user?.displayName}
+                                {
+                                    user?.photoURL && <img width="30" className="rounded-circle me-2" src={user.photoURL} alt="" />
+                                }
+                                {user?.displayName}
                             </span>
                         </li>
-                        <li className="nav-item">
-                            <NavLink activeStyle={activeStyle} to="/home" className="nav-link">
-                                Home
-                            </NavLink>
-                        </li>
+                        {
+                            location.pathname === '/' ? <li className="nav-item">
+                                <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/" className="nav-link">
+                                    Home
+                                </NavLink>
+                            </li>
+                                :
+                                <li className="nav-item">
+                                    <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/home" className="nav-link">
+                                        Home
+                                    </NavLink>
+                                </li>
+                        }
+
+
+
 
                         <li className="nav-item">
-                            <NavLink activeStyle={activeStyle} to="/latest-articles" className="nav-link">
+                            <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/latest-articles" className="nav-link">
                                 Latest Articles
                             </NavLink>
                         </li>
 
                         <li className="nav-item">
-                            <NavLink activeStyle={activeStyle} to="/about-us" className="nav-link">
-                                About Us
+                            <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/contact-us" className="nav-link">
+                                Contact Us
                             </NavLink>
                         </li>
                         {
@@ -55,7 +76,7 @@ const Navbar = () => {
                                 </li>
                                 :
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} to="/login" className="nav-link">Login</NavLink>
+                                    <NavLink onClick={handleScroll} activeStyle={activeStyle} to="/login" className="nav-link">Login</NavLink>
                                 </li>
                         }
                     </ul>

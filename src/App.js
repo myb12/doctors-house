@@ -9,13 +9,16 @@ import SignUp from './Components/SignUp/SignUp';
 import Articles from './Components/Articles/Articles';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AuthProvider from './context/AuthProvider';
+import ContactUs from './Components/ContactUs/ContactUs';
+import NotFound from './Components/NotFound/NotFound';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
         <Navbar />
-        
+
         <Switch>
           <Route exact path="/">
             <Hero />
@@ -38,8 +41,16 @@ function App() {
           <Route path="/latest-articles">
             <Articles />
           </Route>
-        </Switch>
 
+          <Route path="/contact-us">
+            <ContactUs />
+          </Route>
+
+          <Route path="/not-found">
+            <NotFound />
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     </AuthProvider>
   );

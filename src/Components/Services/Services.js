@@ -7,7 +7,7 @@ const Services = () => {
     const [services] = useServices();
     console.log(services);
     return (
-        <section className="food-area my-5">
+        <section className="services-area my-5">
             <div className="container">
                 <div className="d-flex flex-column align-items-center">
                     <h1 className="heroHeading serviceHeading">Our services</h1>

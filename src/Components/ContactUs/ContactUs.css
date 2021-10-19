@@ -1,0 +1,21 @@
+.contact-us-container{
+    margin-top: 100px;
+}
+
+.card{
+    border: 1px solid #458ff6;
+}
+
+.card-header{
+    background-color: #458ff6;
+}
+
+.contact-icons{
+    background-color: #458ff6;
+    cursor:pointer;
+    transition: all 0.2s linear;
+}
+
+.contact-icons:hover{
+     background-color: #FFCE31;
+}
